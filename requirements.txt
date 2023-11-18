@@ -1,0 +1,5 @@
+Flask
+requests
+gunicorn
+mysql-connector-python==8.0.31
+Flask-SocketIO

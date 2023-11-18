@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask SQLite CRUD</title>
+</head>
+<body>
+    <h1>Item List</h1>
+    <ul>
+        {% for item in items %}
+            <li>
+                {{ item['name'] }}
+                <a href="/delete_item/{{ item['id'] }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <form method="post" action="/sucess">
+        <label for="name">Item Name:</label>
+        <input type="text" name="name" id="name" required>
+        <input type="submit" value="Add Item">
+    </form>
+</body>
+</html>
